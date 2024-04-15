@@ -40,7 +40,7 @@ struct ContentView: View {
             eventsList = []
             timesList = []
 
-            var store = EKEventStore()
+            let store = EKEventStore()
             
             store.requestFullAccessToEvents { granted, error in
                 if granted {
