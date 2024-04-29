@@ -31,7 +31,7 @@ struct ContentView: View {
         }
         Menu("More...") {
             Text("Version - 1.0")
-            Text("Build - 1")
+            Text("Build - 2")
             Button(action: {NSApplication.shared.terminate(self)}) {
                 Text("Quit")
             }
