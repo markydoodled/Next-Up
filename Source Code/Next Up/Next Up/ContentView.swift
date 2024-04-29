@@ -13,9 +13,9 @@ struct ContentView: View {
     @State private var timesList: [String] = []
     var body: some View {
         Section {
-            ForEach(eventsList, id: \.count) { event in
+            ForEach(Array(zip(eventsList, timesList)), id: \.0) { item in
                 HStack {
-                    Text("\(timesList.formatted()) - \(eventsList.formatted())")
+                    Text("\(item.1) - \(item.0)")
                 }
             }
         } header: {
