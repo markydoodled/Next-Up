@@ -29,13 +29,6 @@ struct ContentView: View {
         }) {
             Text("Open Calendar")
         }
-        Menu("More...") {
-            Text("Version - 1.0")
-            Text("Build - 2")
-            Button(action: {NSApplication.shared.terminate(self)}) {
-                Text("Quit")
-            }
-        }
         Button(action: {
             eventsList = []
             timesList = []
@@ -67,6 +60,13 @@ struct ContentView: View {
             }
         }) {
             Text("Refresh")
+        }
+        Menu("More...") {
+            Text("Version - 1.1")
+            Text("Build - 2")
+            Button(action: {NSApplication.shared.terminate(self)}) {
+                Text("Quit")
+            }
         }
     }
 }
