@@ -9,14 +9,11 @@ import SwiftUI
 import EventKit
 
 struct ContentView: View {
-    @State private var eventsList: [String] = []
-    @State private var timesList: [String] = []
+    @EnvironmentObject var eventData: EventData
     var body: some View {
         Section {
-            ForEach(Array(zip(eventsList, timesList)), id: \.0) { item in
-                HStack {
-                    Text("\(item.1) - \(item.0)")
-                }
+            ForEach(Array(zip(eventData.eventsList, eventData.timesList)), id: \.0) { index in
+                Text("\(index.1) - \(index.0)")
             }
         } header: {
             Text("Happening Today")
@@ -30,8 +27,8 @@ struct ContentView: View {
             Text("Open Calendar")
         }
         Button(action: {
-            eventsList = []
-            timesList = []
+            eventData.eventsList = []
+            eventData.timesList = []
 
             let store = EKEventStore()
             
@@ -46,14 +43,16 @@ struct ContentView: View {
                     let predicate = store.predicateForEvents(withStart: startOfDay, end: endOfDay, calendars: nil)
                     let events = store.events(matching: predicate)
                     
-                    for event in events {
-                        print(event.title!)
-                        print(event.startDate!)
-                        eventsList.append(event.title!)
-                        timesList.append(event.startDate!.formatted(date: .omitted, time: .shortened))
+                    DispatchQueue.main.async {
+                        for event in events {
+                            print(event.title!)
+                            print(event.startDate!)
+                            eventData.eventsList.append(event.title!)
+                            eventData.timesList.append(event.startDate!.formatted(date: .omitted, time: .shortened))
+                        }
+                        print("Events Today: \(eventData.eventsList.formatted())")
+                        print("Times Today: \(eventData.timesList.formatted())")
                     }
-                    print("Events Today: \(eventsList.formatted())")
-                    print("Times Today: \(timesList.formatted())")
                 } else {
                     print(error ?? "Error")
                 }
