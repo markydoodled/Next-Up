@@ -52,7 +52,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         print(event.title!)
                         print(event.startDate!)
                         self.eventData.eventsList.append(event.title!)
-                        self.eventData.timesList.append(event.startDate!.formatted(date: .omitted, time: .shortened))
+                        let timeRange = "\(event.startDate!.formatted(date: .omitted, time: .shortened)) - \(event.endDate!.formatted(date: .omitted, time: .shortened))"
+                        self.eventData.timesList.append(timeRange)
                     }
                     print("Events Today: \(self.eventData.eventsList.formatted())")
                     print("Times Today: \(self.eventData.timesList.formatted())")
@@ -85,7 +86,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         print(event.title!)
                         print(event.startDate!)
                         self.eventData.eventsList.append(event.title!)
-                        self.eventData.timesList.append(event.startDate!.formatted(date: .omitted, time: .shortened))
+                        let timeRange = "\(event.startDate!.formatted(date: .omitted, time: .shortened)) - \(event.endDate!.formatted(date: .omitted, time: .shortened))"
+                        self.eventData.timesList.append(timeRange)
                     }
                     print("Events Today: \(self.eventData.eventsList.formatted())")
                     print("Times Today: \(self.eventData.timesList.formatted())")
