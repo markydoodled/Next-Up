@@ -12,8 +12,8 @@ struct ContentView: View {
     @EnvironmentObject var eventData: EventData
     var body: some View {
         Section {
-            ForEach(Array(zip(eventData.eventsList, eventData.timesList)), id: \.0) { index in
-                Text("\(index.1) - \(index.0)")
+            ForEach(Array(zip(eventData.eventsList, eventData.timesList)).indices, id: \.self) { index in
+                Text("\(eventData.timesList[index]) - \(eventData.eventsList[index])")
             }
         } header: {
             Text("Happening Today")
@@ -48,7 +48,8 @@ struct ContentView: View {
                             print(event.title!)
                             print(event.startDate!)
                             eventData.eventsList.append(event.title!)
-                            eventData.timesList.append(event.startDate!.formatted(date: .omitted, time: .shortened))
+                            let timeRange = "\(event.startDate!.formatted(date: .omitted, time: .shortened)) - \(event.endDate!.formatted(date: .omitted, time: .shortened))"
+                            eventData.timesList.append(timeRange)
                         }
                         print("Events Today: \(eventData.eventsList.formatted())")
                         print("Times Today: \(eventData.timesList.formatted())")
