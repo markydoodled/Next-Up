@@ -62,8 +62,8 @@ struct ContentView: View {
             Text("Refresh")
         }
         Menu("More...") {
-            Text("Version - 1.2")
-            Text("Build - 5")
+            Text("Version - 1.3")
+            Text("Build - 6")
             Button(action: {NSApplication.shared.terminate(self)}) {
                 Text("Quit")
             }
