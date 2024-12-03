@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51B01DE2CFF90F700A29206 /* Next Up IAPs.storekit in Resources */ = {isa = PBXBuildFile; fileRef = D51B01DD2CFF90F700A29206 /* Next Up IAPs.storekit */; };
+		D51B01E02CFF917500A29206 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B01DF2CFF917500A29206 /* TipView.swift */; };
 		D57E02022BC893400061DFC7 /* Next_UpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E02012BC893400061DFC7 /* Next_UpApp.swift */; };
 		D57E02042BC893400061DFC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E02032BC893400061DFC7 /* ContentView.swift */; };
 		D57E02062BC893460061DFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57E02052BC893460061DFC7 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D51B01DD2CFF90F700A29206 /* Next Up IAPs.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Next Up IAPs.storekit"; sourceTree = "<group>"; };
+		D51B01DF2CFF917500A29206 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		D57E01FE2BC893400061DFC7 /* Next Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Next Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57E02012BC893400061DFC7 /* Next_UpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Next_UpApp.swift; sourceTree = "<group>"; };
 		D57E02032BC893400061DFC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				D57E02052BC893460061DFC7 /* Assets.xcassets */,
 				D57E020A2BC893460061DFC7 /* Next_Up.entitlements */,
 				D57E02072BC893460061DFC7 /* Preview Content */,
+				D51B01DD2CFF90F700A29206 /* Next Up IAPs.storekit */,
+				D51B01DF2CFF917500A29206 /* TipView.swift */,
 			);
 			path = "Next Up";
 			sourceTree = "<group>";
@@ -129,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51B01DE2CFF90F700A29206 /* Next Up IAPs.storekit in Resources */,
 				D57E02092BC893460061DFC7 /* Preview Assets.xcassets in Resources */,
 				D57E02062BC893460061DFC7 /* Assets.xcassets in Resources */,
 			);
@@ -143,6 +150,7 @@
 			files = (
 				D57E02042BC893400061DFC7 /* ContentView.swift in Sources */,
 				D57E02022BC893400061DFC7 /* Next_UpApp.swift in Sources */,
+				D51B01E02CFF917500A29206 /* TipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +285,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Next Up/Next_Up.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 10;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Next Up/Preview Content\"";
 				DEVELOPMENT_TEAM = ZWASU9HFBU;
@@ -293,7 +301,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Next-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -309,7 +317,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Next Up/Next_Up.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 10;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Next Up/Preview Content\"";
 				DEVELOPMENT_TEAM = ZWASU9HFBU;
@@ -325,7 +333,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.MSJ.Next-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
