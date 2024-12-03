@@ -23,6 +23,11 @@ struct Next_UpApp: App {
                 .environmentObject(eventData)
         }
         .menuBarExtraStyle(.menu)
+        Window("Tip Jar", id: "tip-jar") {
+            TipView()
+                .frame(minWidth: 550, maxWidth: 550, minHeight: 480, maxHeight: 480)
+        }
+        .windowResizability(.contentSize)
     }
 }
 

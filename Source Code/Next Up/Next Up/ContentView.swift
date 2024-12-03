@@ -10,6 +10,7 @@ import EventKit
 
 struct ContentView: View {
     @EnvironmentObject var eventData: EventData
+    @Environment(\.openWindow) var openWindow
     var body: some View {
         Section {
             ForEach(Array(zip(eventData.eventsList, eventData.timesList)).indices, id: \.self) { index in
@@ -62,12 +63,40 @@ struct ContentView: View {
             Text("Refresh")
         }
         Menu("More...") {
-            Text("Version - 1.3")
-            Text("Build - 6")
-            Button(action: {NSApplication.shared.terminate(self)}) {
-                Text("Quit")
+            Text("Next Up")
+            Text("© 2024 Mark Howard")
+            Text("Version - \(Bundle.main.releaseVersionNumber ?? "")")
+            Text("Build - \(Bundle.main.buildVersionNumber ?? "")")
+            Link("Portfolio", destination: URL(string: "https://markydoodled.com/")!)
+            Link("GitHub Repo", destination: URL(string: "https://github.com/markydoodled/Next-Up")!)
+            Button("Tip Jar") {
+                openWindow(id: "tip-jar")
+            }
+            Button("Feedback") {
+                SendEmail.send()
+            }
+            Button("Quit") {
+                NSApplication.shared.terminate(self)
             }
         }
+    }
+}
+
+extension Bundle {
+    var buildVersionNumber: String? {
+        return infoDictionary?["CFBundleVersion"] as? String
+    }
+    var releaseVersionNumber: String? {
+        return infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+}
+
+class SendEmail: NSObject {
+    static func send() {
+        let service = NSSharingService(named: NSSharingService.Name.composeEmail)!
+        service.recipients = ["markhoward@markydoodled.com"]
+        service.subject = "Next Up Feedback"
+        service.perform(withItems: ["Please Fill Out All Relevant Sections:", "Report A Bug - ", "Rate The App - ", "Suggest An Improvement - "])
     }
 }
 
