@@ -14,60 +14,103 @@
 
   ],
   "products" : [
-
+    {
+      "displayPrice" : "3.99",
+      "familyShareable" : false,
+      "internalID" : "6738963346",
+      "localizations" : [
+        {
+          "description" : "A Huge Contribution To Buy Me Lunch!",
+          "displayName" : "Large Tip",
+          "locale" : "en_GB"
+        }
+      ],
+      "productID" : "next_up_large_tip",
+      "referenceName" : "Next Up Large Tip",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "6738963511",
+      "localizations" : [
+        {
+          "description" : "A Medium Contribution To Buy Me A Coffee!",
+          "displayName" : "Medium Tip",
+          "locale" : "en_GB"
+        }
+      ],
+      "productID" : "next_up_medium_tip",
+      "referenceName" : "Next Up Medium Tip",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "6738963339",
+      "localizations" : [
+        {
+          "description" : "A Small Contribution To Say Thanks!",
+          "displayName" : "Small Tip",
+          "locale" : "en_GB"
+        }
+      ],
+      "productID" : "next_up_small_tip",
+      "referenceName" : "Next Up Small Tip",
+      "type" : "Consumable"
+    }
   ],
   "settings" : {
     "_applicationInternalID" : "6496284092",
+    "_askToBuyEnabled" : false,
+    "_billingGracePeriodEnabled" : false,
+    "_billingIssuesEnabled" : false,
     "_developerTeamID" : "ZWASU9HFBU",
+    "_disableDialogs" : false,
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 754946298.99272704,
+    "_lastSynchronizedDate" : 789173436.01319695,
+    "_locale" : "en_GB",
+    "_renewalBillingIssuesEnabled" : false,
+    "_storefront" : "GBR",
     "_storeKitErrors" : [
       {
-        "current" : null,
         "enabled" : false,
         "name" : "Load Products"
       },
       {
-        "current" : null,
         "enabled" : false,
         "name" : "Purchase"
       },
       {
-        "current" : null,
         "enabled" : false,
         "name" : "Verification"
       },
       {
-        "current" : null,
         "enabled" : false,
         "name" : "App Store Sync"
       },
       {
-        "current" : null,
         "enabled" : false,
         "name" : "Subscription Status"
       },
       {
-        "current" : null,
         "enabled" : false,
         "name" : "App Transaction"
       },
       {
-        "current" : null,
         "enabled" : false,
         "name" : "Manage Subscriptions Sheet"
       },
       {
-        "current" : null,
         "enabled" : false,
         "name" : "Refund Request Sheet"
       },
       {
-        "current" : null,
         "enabled" : false,
         "name" : "Offer Code Redeem Sheet"
       }
-    ]
+    ],
+    "_timeRate" : 0
   },
   "subscriptionGroups" : [
 

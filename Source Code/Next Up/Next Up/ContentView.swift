@@ -64,7 +64,7 @@ struct ContentView: View {
         }
         Menu("More...") {
             Text("Next Up")
-            Text("© 2024 Mark Howard")
+            Text("© 2026 Mark Howard")
             Text("Version - \(Bundle.main.releaseVersionNumber ?? "")")
             Text("Build - \(Bundle.main.buildVersionNumber ?? "")")
             Link("Portfolio", destination: URL(string: "https://markydoodled.com/")!)
